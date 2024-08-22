@@ -1,3 +1,7 @@
+package Heroes;
+
+import Enemies.Enemy;
+
 public abstract class Hero {
     private String name;
     private int health;

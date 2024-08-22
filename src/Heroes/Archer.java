@@ -1,3 +1,7 @@
+package Heroes;
+
+import Enemies.Enemy;
+
 public class Archer extends Hero {
     private static int ARCHERDAMAGE = 10;
     private static int HEALTH = 35;

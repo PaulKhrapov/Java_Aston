@@ -1,3 +1,8 @@
+package Enemies;
+
+import Heroes.Hero;
+import Specs.Mortal;
+
 public abstract class Enemy implements Mortal {
     private String nameZombie;
     private int health;

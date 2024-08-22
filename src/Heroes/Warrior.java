@@ -1,4 +1,8 @@
-public class Warrior extends Hero{
+package Heroes;
+
+import Enemies.Enemy;
+
+public class Warrior extends Hero {
     private static int WARRIORDAMAGE = 2;
     private static int HEALTH = 50;
 

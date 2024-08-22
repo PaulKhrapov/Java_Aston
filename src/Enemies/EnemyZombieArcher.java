@@ -1,3 +1,7 @@
+package Enemies;
+
+import Heroes.Hero;
+
 public class EnemyZombieArcher extends Enemy{
     private static int HEALTH = 20;
     private static int ZMBARCHRDAMAGE = 5;
