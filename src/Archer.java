@@ -1,14 +1,19 @@
 public class Archer extends Hero {
-    private static int DAMAGE = 4;
+    private static int ARCHERDAMAGE = 10;
+    private static int HEALTH = 35;
 
     public Archer(String name){
-        super(name);
+        super(name, HEALTH);
     }
 
     @Override
     public void attackEnemy(Enemy enemy){
-        System.out.println("Лучник "+getName()+" атакует врага стрелами!");
-        enemy.takeDamage(DAMAGE);
-        System.out.println("Лучник "+getName()+" нанёс " + DAMAGE +" урона. У противника осталось "+ enemy.getHealth() +" хп!");
+        System.out.println("Лучник "+getName()+" атакует врага стрелами и наносит "+ARCHERDAMAGE+" урона!");
+        enemy.takeDamage(ARCHERDAMAGE);
+        enemy.checkHP();
+    }
+
+    public void takeDamage(int takeDamage){
+        setHealth(HEALTH-=takeDamage);
     }
 }

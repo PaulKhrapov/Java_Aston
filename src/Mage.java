@@ -1,14 +1,20 @@
 public class Mage extends Hero{
-    private static int DAMAGE = 6;
+    private static int MAGEDAMAGE = 6;
+    private static int HEALTH = 30;
 
     public Mage(String name){
-        super(name);
+        super(name, HEALTH);
     }
 
     @Override
     public void attackEnemy(Enemy enemy){
         System.out.println("Маг "+getName()+" атакует врага магией!");
-        enemy.takeDamage(DAMAGE);
-        System.out.println("Маг "+getName()+" нанёс " + DAMAGE +" урона. У противника осталось "+ enemy.getHealth() +" хп!");
+        enemy.takeDamage(MAGEDAMAGE);
+        System.out.println("Маг "+getName()+" нанёс " + MAGEDAMAGE +" урона.");
+        enemy.checkHP();
+    }
+
+    public void takeDamage(int takeDamage){
+        setHealth(HEALTH-=takeDamage);
     }
 }
